@@ -3,6 +3,6 @@
 
 void display(){
 	char** blackKnight = reverse(queen);
-  interpreter(blackKnight);
+	interpreter(blackKnight);
 }
 
