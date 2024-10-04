@@ -6,7 +6,7 @@ void display(){
   char** cuadradoN = reverse(cuadradoB);
 
 
-  interpreter(join(cuadradoB,cuadradoN));
+  interpreter(repeatH(join(cuadradoB,cuadradoN)),4);
 
 }
 
