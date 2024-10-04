@@ -5,8 +5,8 @@ void display(){
   char** cuadradoB = whiteSquare;
   char** cuadradoN = reverse(cuadradoB);
 
-
-  interpreter(repeatH(join(cuadradoB,cuadradoN)),4);
+  char** lineaT = repeatH(join(cuadradoB, cuadradoN), 4);
+  interpreter(lineaT);
 
 }
 
