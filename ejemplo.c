@@ -2,6 +2,7 @@
 #include "figures.h"
 
 void display(){
-  char** blackKnight = reverse(knight);
+	char** blackKnight = reverse(queen);
   interpreter(blackKnight);
 }
+
