@@ -5,6 +5,6 @@ void display(){
     char** cuadradoB = whiteSquare;
     char** cuadradoN = reverse(cuadradoB);
 
-    interpreter(join(cuadradoB, cuadradoN));
+    interpreter(superImpose(cuadradoB, cuadradoN));
 }
 
