@@ -6,6 +6,7 @@ char ** line(){
 
 void display (){
 
-  interpreter(line());
+  char** twoL = up(reverse(line()), line());
+  interpreter(twoL);
 
 }
