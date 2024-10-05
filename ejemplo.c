@@ -1,4 +1,4 @@
-#include "chess.hm "
+#include "chess.h"
 #include "figures.h"
 
 
