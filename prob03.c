@@ -8,5 +8,5 @@ void display (){
   char ** lineaT= repeatH(join(cuadradoB,cuadradoN),4);
   char ** lineaInversa= repeatH(join(cuadradoN, cuadradoB),4);
   char ** prueba= up (cuadradoB,cuadradoN);
-  interpreter(prueba);
+  interpreter(join(queen, prueba));
 }
