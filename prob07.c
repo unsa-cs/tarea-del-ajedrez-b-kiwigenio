@@ -49,6 +49,7 @@ void display (){
 
   char** prueba3 = rotateL(rotateL(knight));
   char** prueba4 = rotateR(rotateR(knight));
-  interpreter(prueba4);
+
+  interpreter(rotateL(mitadTablaUp()));
 
 }
