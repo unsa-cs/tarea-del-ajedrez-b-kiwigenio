@@ -15,8 +15,6 @@ char** lineFigure(){
 }
 void display (){
 
-  char** test = join(reverse(whiteSquare),whiteSquare);
-
   interpreter(lineFigure());
 
 }
