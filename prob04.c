@@ -6,7 +6,8 @@ char** line(){
 void display (){
   
   char** twoL = up(reverse(line()), line());
-  char** board = repeatV(twoL,2);
-  interpreter(superImpose(rook,board));
+  char** test = join(reverse(whiteSquare),whiteSquare);
+   
+  interpreter(superImpose(test,rook));
 
 }
