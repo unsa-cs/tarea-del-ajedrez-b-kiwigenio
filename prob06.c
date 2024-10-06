@@ -16,7 +16,7 @@ char** lineFigure(){
 
 char** linePawns(){
   
-  char** lineBase = line();
+  char** lineBase = reverse(line());
   char** result = pawn;
   for(int i=1 ; i<8 ; i++){
     result = join(result,pawn);
@@ -27,7 +27,7 @@ char** linePawns(){
 
 char** mitadTabla(){
   char** twoLinesFigures = up(lineFigure(), linePawns());
-  char** twoLinesSquares = up(line(), line());
+  char** twoLinesSquares = up(line(), reverse(line()));
   char** mitadT = up(twoLinesFigures, twoLinesSquares);
   return mitadT;
 }
