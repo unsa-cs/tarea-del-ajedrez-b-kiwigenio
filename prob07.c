@@ -46,11 +46,12 @@ void display (){
   char** squareB = reverse(whiteSquare);
   char** twoSquaresVoid = join(whiteSquare, squareB);
   char** knightA = superImpose(knight, whiteSquare);
-  char** knightB = superImpose(knight, reverse(whiteSquare));
+  char** knightB = superImpose(flipV(knight), reverse(whiteSquare));
   char** twoSquaresKnight1 = join(squareB, knightA);
   char** fourSquares1 = join(twoSquaresKnight1, reverse(twoSquaresVoid));
   char** twoSquaresKnight2 = join(knightB, whiteSquare);
   char** fourSquares2 = join(reverse(twoSquaresVoid), twoSquaresKnight2);
+  char** figureF = join(fourSquares1, fourSquares2);
   
-  interpreter(fourSquares2);
+  interpreter(figureF);
 }
