@@ -43,8 +43,11 @@ char** mitadTablaDown(){
 
 
 void display (){
-  
-  char** imagen= superImpose(knight, whiteSquare);
-  interpreter(imagen);
+  char** lineSquare = line();
+  char** knightA = superImpose(knight, whiteSquare);
+  char** knightB = superImpose(knight, reverse(whiteSquare));
 
+
+  char** figureF = join(knightA, rotateR(knightB));
+  interpreter(figureF);
 }
