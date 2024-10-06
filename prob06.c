@@ -36,7 +36,8 @@ char** mitadTablaDown(){
   char** twoLinesSquares = up(line(), reverse(line()));
   char** pawnB = reverse(linePawns());
   char** figuresB = reverse(lineFigure());
-  return figuresB;
+  char** twoLinesFigures = up(pawnB, figuresB);
+  return twoLinesFigures;
 }
 
 void display (){
