@@ -47,9 +47,11 @@ char** cuadrante(){
   char** caballo=knight;
   for(int i=1;i<8;i++){
     if (i==1){
-      caballo=superImpose(caballo, join(blanco,negro));
-      
-    }   
+      caballo=superImpose(caballo, join(blanco,negro)); 
+    }
+    else if (i%2==0) {
+      caballo= join(caballo,blanco);
+    }
   }
   return caballo;
 
