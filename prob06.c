@@ -42,6 +42,7 @@ char** mitadTablaDown(){
 }
 
 void display (){
-  interpreter(mitadTablaDown());
+  char** table = up(mitadTablaUp(), mitadTablaDown());
+  interpreter(table);
 
 }
