@@ -1,12 +1,12 @@
 #include "chess.h"
 #include "figures.h"
-
+char** line(){
+  return repeatH(join(whiteSquare, reverse(whiteSquare)),4);
+}
 void display (){
-  char ** cuadradoB=whiteSquare;
-  char ** cuadradoN= reverse(cuadradoB);
+  
+  char** twoL = up(reverse(line()), line());
+  char** board = repeatV(twoL,2);
+  interpreter(superImpose(rook,board));
 
-  char ** lineaT= repeatH(join(cuadradoB,cuadradoN),4);
-  char ** lineaInversa= repeatH(join(cuadradoN, cuadradoB),4);
-  char ** prueba= up (cuadradoN,cuadradoB);
-  interpreter(prueba);
 }
