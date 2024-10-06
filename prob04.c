@@ -1,7 +1,7 @@
 #include "chess.h"
 #include "figures.h"
 char** line(){
-  return repeatH(join(whiteSquare, reverse(whiteSquare)),4);
+  return repeatH(join(reverse(whiteSquare), whiteSquare),4);
 }
 void display (){
   
@@ -12,10 +12,8 @@ void display (){
   char** figures3 = join(bishop, join(knight, rook));
 
   char** figures4 = join(figures1, join(figures2, figures3));
+  char** lineaFigura = superImpose(figures4, line());
 
-
-
-
-  interpreter(figures4);
+  interpreter(lineaFigura);
 
 }
