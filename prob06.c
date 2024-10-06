@@ -4,7 +4,6 @@ char** line(){
   return repeatH(join(reverse(whiteSquare), whiteSquare),4);
 }
 char** lineFigure(){
-
   char** figures[] = {rook,knight,bishop,queen,king,bishop,knight,rook};
   char** lineBase = line();
   char** result = *figures;
@@ -13,9 +12,21 @@ char** lineFigure(){
   }
   char** lineF = superImpose(result,lineBase);
   return lineF;
-
 }
+
+char** linePawns(){
+  
+  char** lineBase = line();
+  char** result;
+  for(int i=0 ; i<8 ; i++){
+    result = join(result,pawn);
+  }
+  char** lineF = superImpose(result,lineBase);
+  return lineF;
+}
+
+
 void display (){
-  interpreter(lineFigure());
+  interpreter(linePawns());
 
 }
