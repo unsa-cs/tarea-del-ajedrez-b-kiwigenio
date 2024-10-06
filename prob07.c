@@ -49,6 +49,8 @@ void display (){
   char** knightB = superImpose(knight, reverse(whiteSquare));
   char** twoSquaresKnight1 = join(squareB, knightA);
   char** fourSquares1 = join(twoSquaresKnight1, reverse(twoSquaresVoid));
+  char** twoSquaresKnight2 = join(knightB, whiteSquare);
+  char** fourSquares2 = join(reverse(twoSquaresVoid), twoSquaresKnight2);
   
-  interpreter(fourSquares1);
+  interpreter(fourSquares2);
 }
