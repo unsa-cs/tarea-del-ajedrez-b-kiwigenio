@@ -52,6 +52,9 @@ char** cuadrante(){
     else if (i%2==0) {
       caballo= join(caballo,blanco);
     }
+    else{
+      caballo= join(caballo, negro);
+    }
   }
   return caballo;
 
