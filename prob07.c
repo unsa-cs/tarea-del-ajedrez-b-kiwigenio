@@ -52,6 +52,8 @@ void display (){
   char** twoSquaresKnight2 = join(knightB, whiteSquare);
   char** fourSquares2 = join(reverse(twoSquaresVoid), twoSquaresKnight2);
   char** figureF = join(fourSquares1, fourSquares2);
+
+  char** twoSquaresKnight3 = join(whiteSquare, reverse(flipH(knightA)));
   
-  interpreter(figureF);
+  interpreter(twoSquaresKnight3);
 }
