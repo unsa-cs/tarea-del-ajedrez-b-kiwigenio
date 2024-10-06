@@ -7,7 +7,8 @@ void display (){
   
   char** twoL = up(reverse(line()), line());
   char** test = join(reverse(whiteSquare),whiteSquare);
-   
-  interpreter(superImpose(test,rook));
+  char** figures = join(rook, bishop);
+
+  interpreter(superImpose(figures, test));
 
 }
