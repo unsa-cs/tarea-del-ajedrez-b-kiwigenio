@@ -26,8 +26,10 @@ char** linePawns(){
 }
 
 char** mitadTabla(){
-  char** twoLines = up(lineFigure(), linePawns());
-  return twoLines;
+  char** twoLinesFigures = up(lineFigure(), linePawns());
+  char** twoLinesSquares = up(line(), line());
+  char** mitadT = up(twoLinesFigures, twoLinesSquares);
+  return mitadT;
 }
 void display (){
   interpreter(mitadTabla());
