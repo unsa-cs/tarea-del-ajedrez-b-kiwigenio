@@ -6,7 +6,7 @@ char** line(){
 void display (){
   
   char** twoL = up(reverse(line()), line());
-  char** board = repeatV(line(),2);
+  char** board = repeatV(twoL,2);
   interpreter(board);
 
 }
