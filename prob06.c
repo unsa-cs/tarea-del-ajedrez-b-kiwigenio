@@ -17,19 +17,19 @@ char** lineFigure(){
 char** linePawns(){
   
   char** lineBase = line();
-  char* tmp1= {"si","no",0};
-  char** tmp2= &tmp1; 
-
-  char** result = tmp2;
-  for(int i=0 ; i<8 ; i++){
+  char** result = pawn;
+  for(int i=1 ; i<8 ; i++){
     result = join(result,pawn);
   }
   char** lineF = superImpose(result,lineBase);
   return lineF;
 }
 
-
+char** mitadTabla(){
+  char** twoLines = up(lineFigure(), linePawns());
+  return twoLines;
+}
 void display (){
-  interpreter(linePawns());
+  interpreter(mitadTabla());
 
 }
