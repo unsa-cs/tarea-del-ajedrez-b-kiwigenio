@@ -41,6 +41,20 @@ char** mitadTablaDown(){
   return mitadT;
 }
 
+char** cuadrante(){
+  char** blanco=whiteSquare;
+  char** negro=reverse(whiteSquare);
+  char** caballo=knight;
+  for(int i=1;i<8;i++){
+    if (i==1){
+      caballo=superImpose(caballo, join(blanco,negro));
+      
+    }   
+  }
+  return caballo;
+
+}
+
 void display (){
   char** table = up(mitadTablaUp(), mitadTablaDown());
   
@@ -50,6 +64,6 @@ void display (){
   char** prueba3 = rotateL(rotateL(knight));
   char** prueba4 = rotateR(rotateR(knight));
 
-  interpreter(rotateL(mitadTablaUp()));
+  interpreter(cuadrante());
 
 }
