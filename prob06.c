@@ -25,13 +25,20 @@ char** linePawns(){
   return lineF;
 }
 
-char** mitadTabla(){
+char** mitadTablaUp(){
   char** twoLinesFigures = up(lineFigure(), linePawns());
   char** twoLinesSquares = up(line(), reverse(line()));
   char** mitadT = up(twoLinesFigures, twoLinesSquares);
   return mitadT;
 }
+
+char** mitadTablaDown(){
+  char** twoLinesSquares = up(line(), reverse(line()));
+  char** pawnB = reverse(linePawns());
+  return pawnB;
+}
+
 void display (){
-  interpreter(mitadTabla());
+  interpreter(mitadTablaDown());
 
 }
