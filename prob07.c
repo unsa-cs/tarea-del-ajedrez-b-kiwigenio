@@ -15,7 +15,7 @@ char** lineFigure(){
 }
 
 char** linePawns(){
-  
+
   char** lineBase = reverse(line());
   char** result = pawn;
   for(int i=1 ; i<8 ; i++){
@@ -58,6 +58,11 @@ void display (){
   char** twoSquaresKnight4 = join(reverse(flipH(knightB)), squareB);
   char** fourSquares4 = join (twoSquaresVoid, twoSquaresKnight4);
   char** figureF2 = join(fourSquares3, fourSquares4);
-  
-  interpreter(figureF2);
+
+  char** lineTwoSquaresDown = up(line(),figureF2);
+  char** lineTwoSquaresUp = up(figureF,reverse(line()));
+  char** lineTwoScuaresVoid = up(line(),reverse(line()));
+  char** boardImcomplete = up(lineTwoSquaresUp,lineTwoScuaresVoid);
+  char** board = up(boardImcomplete,flipH(boardImcomplete));
+  interpreter(board);
 }
