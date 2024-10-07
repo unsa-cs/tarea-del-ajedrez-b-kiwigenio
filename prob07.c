@@ -53,16 +53,9 @@ void display (){
   char** fourSquares2 = join(reverse(twoSquaresVoid), twoSquaresKnight2);
   char** figureF = join(fourSquares1, fourSquares2);
 
-  char** twoSquaresKnight3 = join(whiteSquare, reverse(flipH(knightA)));
-  char** fourSquares3 = join(twoSquaresKnight3, twoSquaresVoid);
-  char** twoSquaresKnight4 = join(reverse(flipH(knightB)), squareB);
-  char** fourSquares4 = join (twoSquaresVoid, twoSquaresKnight4);
-  char** figureF2 = join(fourSquares3, fourSquares4);
-
-  char** lineTwoSquaresDown = up(line(),figureF2);
   char** lineTwoSquaresUp = up(figureF,reverse(line()));
   char** lineTwoScuaresVoid = up(line(),reverse(line()));
   char** boardImcomplete = up(lineTwoSquaresUp,lineTwoScuaresVoid);
-  char** board = up(boardImcomplete,flipH(boardImcomplete));
+  char** board = up(boardImcomplete,flipV(flipH(boardImcomplete)));
   interpreter(board);
 }
