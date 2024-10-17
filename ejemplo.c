@@ -3,6 +3,8 @@
 
 
 void display(){
+  char joseok = probar;
+    char ** new = jose;
   char** cuadradoB = whiteSquare;
   char** cuadradoN = reverse(cuadradoB);
 
