@@ -3,6 +3,7 @@
 
 
 void display(){
+  char** error3 = perfecto3;
   char** error2 = perfecto2;
   char** error = perfecto;
   char** triangulo = equilatero;
