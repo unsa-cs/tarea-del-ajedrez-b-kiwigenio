@@ -3,7 +3,7 @@
 
 
 void display(){
-  char** redondo = probado;
+  char** error = perfecto;
   char** triangulo = equilatero;
   char** cuadradoB = whiteSquare;
   char** cuadradoN = reverse(cuadradoB);
